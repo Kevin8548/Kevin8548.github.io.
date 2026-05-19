@@ -1,5 +1,6 @@
 import {Button} from '@/components/Button';
 import { ArrowRight } from 'lucide-react';
+import { AnimatedBorderButton } from '../components/AnimatedBorderButton';
 
 export const Hero = () => {
     return (
@@ -39,28 +40,26 @@ export const Hero = () => {
 
                     {/* Headline */}
                     <div className="space-y-4">
-                        <h1 className="text-5xl md:text-6xl lg;text-7xl font-bold leading-tight animate-fade-in animation-delay-100">
+                        <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animation-delay-100">
                             Crafting <span className="text-primary glow-text">digital</span>
                             <br />
                             experiences with
                             <br />
-                            <span className="font-serif italic font-normal text white">
+                            <span className="font-serif italic font-normal text-white">
                                 precision.
                             </span>
                         </h1>
-                        <p className="text-lg text-muted-foreground max-w-lg animte-fade-in animate-delay-200">
+                        <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animate-delay-200">
                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci saepe vero explicabo, reprehenderit ipsum beatae esse illum amet culpa cupiditate consectetur, tempora facere ipsa. Placeat, tenetur! Est quidem quis vero?
                         </p>
                     </div>
 
                     {/* CTAs */}
-                    <div>
+                    <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
                         <Button size="lg">
                             Contact Me :3 <ArrowRight className="w-5 h-5"/>
                         </Button>
-                        <button>
-                            
-                        </button>
+                        <AnimatedBorderButton />
                     </div>
 
                 </div>
