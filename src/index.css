@@ -1,28 +1,44 @@
-@import "tailwindcss"; 
+@import "tailwindcss";
 
 @theme {
-  --color-background: #f0f0f0;
-  --color-foreground: #333333;
+  /* ── Backgrounds ── */
+  --color-background: #0a0e12;        /* Negro profundo, base principal */
+  --color-surface: #111720;           /* Negro azulado para cards/glass */
+  --color-surface-2: #161e28;         /* Superficie secundaria */
 
-  --color-card: #932840;
+  /* ── Foreground ── */
+  --color-foreground: #e8edf2;        /* Blanco frío, texto principal */
 
-  --color-primary: #1e90ff;
-  --color-primary-foreground: #f32323;
+  /* ── Primary — Verde elegante ── */
+  --color-primary: #2dd4a0;           /* Verde menta sofisticado */
+  --color-primary-dark: #1fa87e;      /* Verde oscuro para hover */
+  --color-primary-muted: #1a3d31;     /* Verde muy apagado para fondos */
 
-  --color-secondary: #ff69b4;
-  --color-secondary-foreground: #f90900;
+  /* ── Secondary — Azul acero ── */
+  --color-secondary: #3b82c4;         /* Azul acero medio */
+  --color-secondary-dark: #2563a8;    /* Azul oscuro */
+  --color-secondary-muted: #162035;   /* Azul muy apagado para fondos */
 
-  --color-muted: #888888;
-  --color-muted-foreground: #908090;
+  /* ── Muted / Texto apagado ── */
+  --color-muted: #2a3444;
+  --color-muted-foreground: #7a90a8;  /* Gris azulado para subtítulos */
 
-  --color-border: #cccccc;
+  /* ── Borders ── */
+  --color-border: #1e2d3f;
 
-  --radious: 0.75rem;
+  /* ── Card ── */
+  --color-card: #111720;
 
-  --color-highlight: #ffeb3b;
-  --color-surface: #829302;
+  /* ── Highlight ── */
+  --color-highlight: #2dd4a0;
+
+  /* ── Radius ── */
+  --radius: 0.75rem;
 }
 
+/* ─────────────────────────────────────
+   BASE
+───────────────────────────────────── */
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -32,39 +48,97 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
   }
 
-  .font-serif{
-    font-family:"Playfair Display", serif;
+  .font-serif {
+    font-family: "Playfair Display", serif;
+  }
+
+  /* Selección de texto */
+  ::selection {
+    background-color: color-mix(in srgb, var(--color-primary) 25%, transparent);
+    color: var(--color-foreground);
+  }
+
+  /* Scrollbar personalizado */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-background);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-muted);
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-primary-dark);
   }
 }
 
+/* ─────────────────────────────────────
+   COMPONENTS
+───────────────────────────────────── */
 @layer components {
+
+  /* Glass — usa surface (negro azulado) */
   .glass {
-    background-color: color-mix(in srgb, var(--color-surface) 50%, transparent);
+    background-color: color-mix(in srgb, var(--color-surface) 60%, transparent);
     backdrop-filter: blur(16px);
-    border: 1px solid color-mix(in, srgb, var(--color-border) 50%, transparent);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid color-mix(in srgb, var(--color-border) 60%, transparent);
   }
 
   .glass-strong {
-    background-color: color-mix(in srgb, var(--color-surface) 80%, transparent);
+    background-color: color-mix(in srgb, var(--color-surface) 85%, transparent);
     backdrop-filter: blur(24px);
-    border: 1px solid color-mix(in, srgb, var(--color-border) 60%, transparent);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid color-mix(in srgb, var(--color-border) 80%, transparent);
   }
 
-  .glow-text{
-    text-shadow: 0 0 30px
-    color-mix(in srgb, var(--color-primary) 50%, transparent);
+  /* Glow verde — primary */
+  .glow-text {
+    text-shadow:
+      0 0 20px color-mix(in srgb, var(--color-primary) 60%, transparent),
+      0 0 40px color-mix(in srgb, var(--color-primary) 30%, transparent);
   }
 
-  .glow-border{
-    box-shadow: 0 0 30px
-    color-mix(in srgb, var(--color-primary) 50%, transparent);
+  .glow-border {
+    box-shadow:
+      0 0 20px color-mix(in srgb, var(--color-primary) 25%, transparent),
+      0 0 50px color-mix(in srgb, var(--color-primary) 10%, transparent),
+      inset 0 0 20px color-mix(in srgb, var(--color-primary) 5%, transparent);
   }
 
+  /* Glow azul — secondary */
+  .glow-border-blue {
+    box-shadow:
+      0 0 20px color-mix(in srgb, var(--color-secondary) 25%, transparent),
+      0 0 50px color-mix(in srgb, var(--color-secondary) 10%, transparent);
+  }
+
+  /* Timeline */
+  .timeline-glow {
+    box-shadow:
+      0 0 40px color-mix(in srgb, var(--color-primary) 30%, transparent),
+      0 0 80px color-mix(in srgb, var(--color-primary) 15%, transparent);
+  }
+
+  /* Botón animado border */
+  .animated-border:hover {
+    background-color: color-mix(in srgb, var(--color-primary) 10%, transparent);
+    backdrop-filter: blur(16px);
+    box-shadow: 0 0 20px color-mix(in srgb, var(--color-primary) 15%, transparent);
+  }
 }
 
-@layer utilities{
+/* ─────────────────────────────────────
+   UTILITIES & ANIMACIONES
+───────────────────────────────────── */
+@layer utilities {
+
+  /* ── Fade in ── */
   @keyframes fade-in {
     from {
       opacity: 0;
@@ -72,96 +146,82 @@
       filter: blur(10px);
     }
     to {
-      opacity: 1; 
+      opacity: 1;
       transform: translateY(0);
       filter: blur(0);
     }
   }
 
+  /* ── Drift de puntos ── */
   @keyframes slow-drift {
-    0%,
-    100% {
-      transform: translate(0, 0);
-    }
-    25% {
-      transform: translate(20px, -30px);
-    }
-    50% {
-      transform: translate(-15px, -20px);
-    }
-    75% {
-      transform: translate(-30px, 10px);
-    }
-
+    0%,   100% { transform: translate(0, 0); }
+    25%         { transform: translate(20px, -30px); }
+    50%         { transform: translate(-15px, -20px); }
+    75%         { transform: translate(-30px, 10px); }
   }
 
-  @keyframes float{
-    0%,
-    100%{
-      transform: translateY(0);
-    }
-    50%{
-      transform: translateY(-10px);
-    }
+  /* ── Float de badges ── */
+  @keyframes float {
+    0%,  100% { transform: translateY(0); }
+    50%        { transform: translateY(-10px); }
   }
+
+  /* ── Marquee de skills ── */
+  @keyframes marquee {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  /* ── Pulse glow (imagen perfil) ── */
+  @keyframes pulse-glow {
+    0%,  100% { opacity: 0.5; }
+    50%        { opacity: 1; }
+  }
+
+  /* ── Border animado ── */
+  @keyframes animated-border {
+    0%   { stroke-dashoffset: 400; }
+    100% { stroke-dashoffset: -550; }
+  }
+
+  /* ─────────── Clases ─────────── */
 
   .animate-fade-in {
     animation: fade-in 0.8s ease-out both;
   }
 
-  .animate-fade-in{
-    animation: fade-in 0.8s ease-out both;
+  .animate-float {
+    animation: fade-in 0.8s ease-out both, float 4s ease-in-out infinite;
   }
 
-  .animate-float{
-    animation: fade-in 0,8s ease-out both, float 4s ease-in-out infinite;
+  .animate-marquee {
+    animation: marquee 30s linear infinite;
   }
 
-  .animate-delay-100{
-    animation-delay: 100ms;
+  .animate-pulse-glow {
+    animation: pulse-glow 3s ease-in-out infinite;
   }
 
-  .animate-delay-200{
-    animation-delay: 200ms;
-  }
+  /* Delays */
+  .animation-delay-100  { animation-delay: 100ms; }
+  .animation-delay-200  { animation-delay: 200ms; }
+  .animation-delay-300  { animation-delay: 300ms; }
+  .animation-delay-400  { animation-delay: 400ms; }
+  .animation-delay-500  { animation-delay: 500ms; }
+  .animation-delay-600  { animation-delay: 600ms; }
+  .animation-delay-800  { animation-delay: 800ms; }
 
-  .animate-delay-300{
-    animation-delay: 300ms;
-  }
+  /* aliases que usas con animate-delay-* */
+  .animate-delay-100  { animation-delay: 100ms; }
+  .animate-delay-200  { animation-delay: 200ms; }
+  .animate-delay-300  { animation-delay: 300ms; }
+  .animate-delay-400  { animation-delay: 400ms; }
+  .animate-delay-500  { animation-delay: 500ms; }
+  .animate-delay-600  { animation-delay: 600ms; }
+  .animate-delay-800  { animation-delay: 800ms; }
 
-  .animate-delay-400{
-    animation-delay: 400ms;
-  }
-
-  .animate-delay-500{
-    animation-delay: 500ms;
-  }
-
-  .animate-delay-600{
-    animation-delay: 600ms;
-  }
-
-  .animate-delay-800{
-    animation-delay: 800ms;
-  }
-
-  @keyframes animated-border {
-    0% {
-      stroke-dashoffset: 400;
-    }
-    100% {
-      stroke-dashoffset: -550;
-    }
-  }
-
-  .group:hover .animated-border-path{
+  /* Border animado — hover del grupo */
+  .group:hover .animated-border-path {
     animation: animated-border 1.5s linear infinite;
   }
-
-  .animated-border:hover {
-  background-color: color-mix(in srgb, #26c4b8 15%, transparent);
-  backdrop-filter: blur(16px);
-  box-shadow: 0 0 20px color-mix(in srgb, #26c4b8 20%, transparent);
-}
-
 }
