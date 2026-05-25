@@ -75,18 +75,20 @@ export const Hero = () => {
             {/* Headline */}
             <div className="space-y-4">
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animation-delay-100">
-                Crafting <span className="text-primary glow-text">digital</span>
+                Construyendo tecnología <span className="text-primary glow-text">digital</span>
                 <br />
-                experiences with
+                que combina
                 <br />
                 <span className="font-serif italic font-normal text-white">
-                  precision.
+                  creatividad e innovación.
                 </span>
               </h1>
               <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animate-delay-200">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci saepe vero explicabo,
-                reprehenderit ipsum beatae esse illum amet culpa cupiditate consectetur, tempora facere ipsa.
-                Placeat, tenetur! Est quidem quis vero?
+                Desarrollo aplicaciones web, sistemas interactivos y proyectos
+                inteligentes combinando diseño, rendimiento y tecnología.
+                Me apasiona crear experiencias modernas utilizando frontend,
+                backend, IoT y automatización para construir proyectos
+                funcionales, visuales e innovadores.
               </p>
             </div>
 

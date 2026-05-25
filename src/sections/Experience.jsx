@@ -1,38 +1,38 @@
 const experiences = [
   {
-    period: "2022 — Present",
-    role: "Senior Frontend Engineer",
-    company: "Tech Innovators Inc.",
+    period: "2025 — Actualidad",
+    role: "Desarrollador Full Stack & Frontend",
+    company: "Proyectos Personales",
     description:
-      "Leading frontend architecture for a suite of fintech products. Implemented micro-frontend architecture, reduced bundle size by 40%, and mentored a team of 5 developers.",
-    technologies: ["React", "TypeScript", "Next.js", "GraphQL"],
+      "Desarrollo de aplicaciones web modernas, sistemas interactivos y experiencias digitales enfocadas en rendimiento, diseño y funcionalidad. Creación de proyectos completos utilizando frontend, backend y bases de datos.",
+    technologies: ["React", "Vue", "Node.js", "PostgreSQL"],
     current: true,
   },
   {
-    period: "2020 — 2022",
-    role: "Frontend Engineer",
-    company: "Digital Solutions Co.",
+    period: "2024 — 2025",
+    role: "Desarrollador IoT & Automatización",
+    company: "Light Step",
     description:
-      "Built and maintained multiple React applications for enterprise clients. Introduced automated testing practices that improved code coverage to 85%.",
-    technologies: ["React", "Redux", "Jest", "Cypress"],
+      "Diseño e implementación de un sistema inteligente de iluminación automatizada utilizando ESP32, Firebase y aplicación móvil. Integración de hardware, tiempo real y control remoto.",
+    technologies: ["Flutter", "ESP32", "Firebase", "Arduino"],
     current: false,
   },
   {
-    period: "2019 — 2020",
-    role: "Junior Developer",
-    company: "StartUp Labs",
+    period: "2024 — 2025",
+    role: "Desarrollador de Sistemas Web",
+    company: "Tacos de Canasta",
     description:
-      "Contributed to the development of a SaaS platform from MVP to production. Collaborated with designers to implement pixel-perfect UI components.",
-    technologies: ["React", "Node.js", "MongoDB", "AWS"],
+      "Desarrollo de un sistema completo de pedidos con gestión de usuarios, carrito de compras, seguimiento de pedidos y paneles dinámicos utilizando Vue y Node.js.",
+    technologies: ["Vue", "Pinia", "Express", "PostgreSQL"],
     current: false,
   },
   {
-    period: "2018 — 2019",
-    role: "Freelance Developer",
-    company: "Self-Employed",
+    period: "2023 — 2024",
+    role: "Desarrollador de Simulación y Experiencias Interactivas",
+    company: "Proyectos Académicos & Experimentales",
     description:
-      "Delivered custom web solutions for small businesses and startups. Built 15+ websites and applications, handling everything from design to deployment.",
-    technologies: ["JavaScript", "PHP", "WordPress", "MySQL"],
+      "Creación de simulaciones visuales y proyectos interactivos relacionados con física, matemáticas y comportamiento dinámico de sistemas automotrices, combinando programación y modelado matemático.",
+    technologies: ["Python", "Simulación", "Matplotlib", "Física"],
     current: false,
   },
 ];
@@ -52,17 +52,17 @@ export const Experience = () => {
             className="text-secondary-foreground text-sm
            font-medium tracking-wider uppercase animate-fade-in"
           >
-            Career Journey
+            Trayectoria
           </span>
+
           <h2
             className="text-4xl md:text-5xl font-bold
            mt-4 mb-6 animate-fade-in animation-delay-100
             text-secondary-foreground"
           >
-            Experience that{" "}
+            Experiencia que refleja{" "}
             <span className="font-serif italic font-normal text-white">
-              {" "}
-              speaks volumes.
+              creatividad y evolución.
             </span>
           </h2>
 
@@ -70,8 +70,9 @@ export const Experience = () => {
             className="text-muted-foreground
            animate-fade-in animation-delay-200"
           >
-            A timeline of my professional growth, from curious beginner to
-            senior engineer leading teams and building products at scale.
+            Un recorrido por proyectos y experiencias donde he combinado
+            desarrollo web, automatización, simulación y tecnologías modernas
+            para construir soluciones funcionales e innovadoras.
           </p>
         </div>
 
@@ -108,11 +109,19 @@ export const Experience = () => {
                     <span className="text-sm text-primary font-medium">
                       {exp.period}
                     </span>
-                    <h3 className="text-xl font-semibold mt-2">{exp.role}</h3>
-                    <p className="text-muted-foreground">{exp.company}</p>
+
+                    <h3 className="text-xl font-semibold mt-2">
+                      {exp.role}
+                    </h3>
+
+                    <p className="text-muted-foreground">
+                      {exp.company}
+                    </p>
+
                     <p className="text-sm text-muted-foreground mt-4">
                       {exp.description}
                     </p>
+
                     <div
                       className={`flex flex-wrap gap-2 mt-4 ${
                         idx % 2 === 0 ? "md:justify-end" : ""

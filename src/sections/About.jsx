@@ -3,26 +3,27 @@ import { Code2, Lightbulb, Rocket, Users } from "lucide-react";
 const highlights = [
   {
     icon: Code2,
-    title: "Clean Code",
+    title: "Desarrollo Moderno",
     description:
-      "Writing maintainable, scalable code that stands the test of time.",
+      "Creando aplicaciones web modernas, escalables e interactivas con enfoque en rendimiento y diseño.",
   },
   {
     icon: Rocket,
-    title: "Performance",
+    title: "Optimización",
     description:
-      "Optimizing for speed and delivering lightning-fast user experiences.",
+      "Desarrollando experiencias rápidas y fluidas para computadoras, celulares y dispositivos inteligentes.",
   },
   {
     icon: Users,
-    title: "Collaboration",
-    description: "Working closely with teams to bring ideas to life.",
+    title: "Resolución de Problemas",
+    description:
+      "Transformando ideas complejas en soluciones funcionales, intuitivas y pensadas para usuarios reales.",
   },
   {
     icon: Lightbulb,
-    title: "Innovation",
+    title: "Innovación",
     description:
-      "Staying ahead with the latest technologies and best practices.",
+      "Explorando tecnologías como IA, IoT, automatización y sistemas inteligentes para crear experiencias diferentes.",
   },
 ];
 
@@ -35,49 +36,51 @@ export const About = () => {
           <div className="space-y-8">
             <div className="animate-fade-in">
               <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase">
-                About Me
+                Sobre Mí
               </span>
             </div>
 
             <h2 className="text-4xl md:text-5xl font-bold leading-tight animate-fade-in animation-delay-100 text-secondary-foreground">
-              Building the future,
+              Construyendo experiencias digitales,
               <span className="font-serif italic font-normal text-white">
                 {" "}
-                one component at a time.
+                proyecto por proyecto.
               </span>
             </h2>
 
             <div className="space-y-4 text-muted-foreground animate-fade-in animation-delay-200">
               <p>
-                I'm a passionate software engineer with over 5 years of
-                experience crafting digital products that make a difference. My
-                journey started with a curiosity for how things work on the web,
-                and it has evolved into a deep expertise in modern frontend
-                technologies.
+                Soy desarrollador de software apasionado por crear aplicaciones
+                modernas, visualmente atractivas y funcionales. Disfruto
+                transformar ideas en experiencias digitales que se sientan
+                dinámicas, intuitivas y bien construidas.
               </p>
+
               <p>
-                I specialize in React, Next.js, and TypeScript, building
-                everything from sleek landing pages to complex enterprise
-                applications. My approach combines technical excellence with a
-                keen eye for design and user experience.
+                He trabajado en proyectos utilizando tecnologías como React,
+                Vue, Flutter, Node.js y bases de datos relacionales, además de
+                desarrollar sistemas conectados con hardware usando ESP32,
+                Arduino y automatización inteligente.
               </p>
+
               <p>
-                When I'm not coding, you'll find me exploring new technologies,
-                contributing to open-source projects, or sharing knowledge with
-                the developer community.
+                Me interesa combinar diseño, rendimiento y creatividad para
+                construir soluciones que no solo funcionen bien, sino que también
+                transmitan una experiencia diferente. Siempre estoy explorando
+                nuevas tecnologías y buscando formas de mejorar cada proyecto.
               </p>
             </div>
 
             <div className="glass rounded-2xl p-6 glow-border animate-fade-in animation-delay-300">
               <p className="text-lg font-medium italic text-foreground">
-                "My mission is to create digital experiences that are not just
-                functional, but truly delightful — products that users love to
-                use and developers love to maintain."
+                "No solo desarrollo aplicaciones; creo experiencias digitales
+                rápidas, modernas e interactivas que conectan tecnología,
+                creatividad y funcionalidad."
               </p>
             </div>
           </div>
 
-          {/* Right Column - Hilights */}
+          {/* Right Column - Highlights */}
           <div className="grid sm:grid-cols-2 gap-6">
             {highlights.map((item, idx) => (
               <div
@@ -85,10 +88,14 @@ export const About = () => {
                 className="glass p-6 rounded-2xl animate-fade-in"
                 style={{ animationDelay: `${(idx + 1) * 100}ms` }}
               >
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 hover:bg-primary/20">
+                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 hover:bg-primary/20 transition-colors">
                   <item.icon className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
+
+                <h3 className="text-lg font-semibold mb-2">
+                  {item.title}
+                </h3>
+
                 <p className="text-sm text-muted-foreground">
                   {item.description}
                 </p>

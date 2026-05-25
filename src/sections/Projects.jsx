@@ -3,35 +3,35 @@ import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
 
 const projects = [
   {
-    title: "Fintech Dashboard",
+    title: "Light Step",
     description:
-      "A comprehensive financial analytics platform with real-time data visualization, portfolio management, and AI-powered insights.",
-    image: "/projects/project1.jpg",
-    tags: ["React", "Typescript", "NodeJS"],
+      "Sistema inteligente de iluminación desarrollado con IoT, aplicación móvil y plataforma web demostrativa. Diseñado para automatizar luces en escaleras y pasillos mediante sensores y control en tiempo real.",
+    image: "/projects/project1.png",
+    tags: ["React", "Flutter", "ESP32", "Firebase", "IoT"],
     link: "#",
   },
   {
-    title: "E-Commerce Platform",
+    title: "Gladiators",
     description:
-      "A full-featured e-commerce solution with inventory management, payment processing, and analytics dashboard.",
-    image: "/projects/project2.jpg",
-    tags: ["Next.js", "Stripe", "PostgreSQL", "Tailwind"],
+      "Página web moderna enfocada en una experiencia visual impactante, con diseño responsivo, animaciones fluidas y una interfaz dinámica desarrollada para destacar identidad y rendimiento.",
+    image: "/projects/project2.png",
+    tags: ["React", "Vite", "Tailwind", "JavaScript"],
     link: "#",
   },
   {
-    title: "AI Writing Assistant",
+    title: "Tacos de Canasta",
     description:
-      "An intelligent writing tool powered by GPT-4, helping users create better content faster.",
-    image: "/projects/project3.jpg",
-    tags: ["React", "OpenAI", "Python", "FastAPI"],
+      "Sistema completo de pedidos de tacos con carrito de compras, gestión de pedidos, roles de usuario y seguimiento de estados en tiempo real utilizando Vue, Node.js y PostgreSQL.",
+    image: "/projects/project3.png",
+    tags: ["Vue", "Node.js", "PostgreSQL", "Pinia"],
     link: "#",
   },
   {
-    title: "Project Management Tool",
+    title: "Simulación de Suspensión",
     description:
-      "A collaborative workspace for teams with real-time updates, task tracking, and integrations.",
-    image: "/projects/project4.jpg",
-    tags: ["Next.js", "Socket.io", "MongoDB", "Redis"],
+      "Proyecto de simulación automotriz enfocado en el comportamiento dinámico de la suspensión de un vehículo, integrando modelado matemático, física y visualización interactiva.",
+    image: "/projects/project4.png",
+    tags: ["Python", "Simulación", "Física", "Matemáticas"],
     link: "#",
   },
 ];
@@ -47,20 +47,21 @@ export const Projects = () => {
         {/* Section Header */}
         <div className="text-center mx-auto max-w-3xl mb-16">
           <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase animate-fade-in">
-            Featured Work
+            Proyectos Destacados
           </span>
 
           <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground">
-            Projects that
+            Proyectos que generan
             <span className="font-serif italic font-normal text-white">
               {" "}
-              make an impact.
+              impacto.
             </span>
           </h2>
 
           <p className="text-muted-foreground animate-fade-in animation-delay-200">
-            A selection of my recent work, from complex web applications to
-            innovative tools that solve real-world problems.
+            Una selección de proyectos desarrollados en áreas como desarrollo
+            web, simulación, automatización, IoT y experiencias digitales
+            interactivas.
           </p>
         </div>
 
@@ -134,7 +135,7 @@ export const Projects = () => {
         {/* View All CTA */}
         <div className="text-center mt-12 animate-fade-in animation-delay-500">
           <AnimatedBorderButton>
-            View All Projects
+            Ver Todos los Proyectos
             <ArrowUpRight className="w-5 h-5" />
           </AnimatedBorderButton>
         </div>
