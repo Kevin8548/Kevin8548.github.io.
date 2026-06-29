@@ -124,7 +124,11 @@ export const Hero = () => {
 
               {/* Card */}
               <div className="relative glass rounded-3xl p-2 glow-border">
-                src={`${import.meta.env.BASE_URL}profile-photo.jpeg`}
+  <img
+    src={`${import.meta.env.BASE_URL}profile-photo.jpeg`}
+    alt="Kevin Arroyo"
+    className="w-full rounded-3xl object-cover"
+  />
 
                 {/* Floating badge - Available */}
                 <div className="absolute -bottom-4 -right-4 glass rounded-xl px-4 py-3 animate-float">
