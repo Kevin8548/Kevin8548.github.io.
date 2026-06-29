@@ -34,11 +34,7 @@ export const Hero = () => {
 
       {/* BG */}
       <div className="absolute inset-0">
-        <img
-          src="/public/hero-bg.png"
-          alt="Hero background"
-          className="w-full h-full object-cover opacity-40"
-        />
+        <img src={`${import.meta.env.BASE_URL}hero-bg.png`} />
         <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-background/20 to-background" />
       </div>
 
@@ -128,11 +124,7 @@ export const Hero = () => {
 
               {/* Card */}
               <div className="relative glass rounded-3xl p-2 glow-border">
-                <img
-                  src="/public/profile-photo.jpeg"
-                  alt="Kevin Arroyo"
-                  className="w-full aspect-[4/5] object-cover rounded-2xl"
-                />
+                src={`${import.meta.env.BASE_URL}profile-photo.jpeg`}
 
                 {/* Floating badge - Available */}
                 <div className="absolute -bottom-4 -right-4 glass rounded-xl px-4 py-3 animate-float">

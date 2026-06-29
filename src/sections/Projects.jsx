@@ -6,7 +6,7 @@ const projects = [
     title: "Light Step",
     description:
       "Sistema inteligente de iluminación desarrollado con IoT, aplicación móvil y plataforma web demostrativa. Diseñado para automatizar luces en escaleras y pasillos mediante sensores y control en tiempo real.",
-    image: "/projects/project1.png",
+    image: `${import.meta.env.BASE_URL}projects/project1.png`,
     tags: ["React", "Flutter", "ESP32", "Firebase", "IoT"],
     link: "#",
   },
@@ -14,7 +14,7 @@ const projects = [
     title: "Gladiators",
     description:
       "Página web moderna enfocada en una experiencia visual impactante, con diseño responsivo, animaciones fluidas y una interfaz dinámica desarrollada para destacar identidad y rendimiento.",
-    image: "/projects/project2.png",
+    image: `${import.meta.env.BASE_URL}projects/project2.png`,
     tags: ["React", "Vite", "Tailwind", "JavaScript"],
     link: "#",
   },
@@ -22,7 +22,7 @@ const projects = [
     title: "Tacos de Canasta",
     description:
       "Sistema completo de pedidos de tacos con carrito de compras, gestión de pedidos, roles de usuario y seguimiento de estados en tiempo real utilizando Vue, Node.js y PostgreSQL.",
-    image: "/projects/project3.png",
+    image: `${import.meta.env.BASE_URL}projects/project3.png`,
     tags: ["Vue", "Node.js", "PostgreSQL", "Pinia"],
     link: "#",
   },
@@ -30,7 +30,7 @@ const projects = [
     title: "Simulación de Suspensión",
     description:
       "Proyecto de simulación automotriz enfocado en el comportamiento dinámico de la suspensión de un vehículo, integrando modelado matemático, física y visualización interactiva.",
-    image: "/projects/project4.png",
+    image: `${import.meta.env.BASE_URL}projects/project4.png`,
     tags: ["Python", "Simulación", "Física", "Matemáticas"],
     link: "#",
   },
