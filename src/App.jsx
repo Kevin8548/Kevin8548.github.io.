@@ -1,4 +1,4 @@
-import { Navbar } from "@/layout/navbar";
+import { Navbar } from "@/layout/Navbar";
 import { Hero } from "@/sections/Hero.jsx";
 import { About } from "@/sections/About";
 import { Projects } from "@/sections/Projects";
